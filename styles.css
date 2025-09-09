@@ -1,0 +1,179 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2b3a67, #38486f);
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px; /* Add this line for rounded top corners */
+}
+
+header .container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding-left: 30px;  /* Add some left padding if you want a small gap, or set to 0 for flush */
+  padding-right: 30px; /* Optional: keep right padding for nav spacing */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  margin-left: 0;         /* Remove any left margin */
+}
+
+.logo-text img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text span {
+  color: #3498db;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Form Card */
+.form-card {
+  background: rgba(255,255,255,0.15);
+  padding: 40px;           
+  border-radius: 10px;
+  width: 500px;          
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  background: #fff;
+  border: none;
+  padding: 8px 0;
+  margin-right: 10px;
+  border-radius: 20px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
+
+.tab.active {
+  background: #f39c12;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-card input,
+.form-card select {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.sign-up-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up-btn:hover {
+  background: #0056b3;
+}
+
+.footer {
+  background: rgba(0,0,0,0.15);
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 40px;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (min-width: 0px) {
+  .header-container {
+    padding-left: 0;     
+  }
+  .logo-text {
+    justify-content: flex-start;
+  }
+}

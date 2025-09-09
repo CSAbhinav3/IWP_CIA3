@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CHRIST University Placement Cell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-text">
+                <a href="index.html">
+                    <img src="./logo.png" alt="Christ University Logo">
+                </a>
+                <span>Placement Cell</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to your Dashboard</h1>
+            <div id="userInfo"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userInfo = localStorage.getItem('currentUser');
+            if (!userInfo) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            const user = JSON.parse(userInfo);
+            document.getElementById('userInfo').innerHTML = `
+                <h2>Welcome, ${user.fullName}!</h2>
+                <p>User Type: ${user.userType}</p>
+            `;
+
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
