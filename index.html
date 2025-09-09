@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Officer Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div class="app">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>PlaceHub</h1>
+                        <p>Admin Portal</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" data-page="validate">
+                    <i data-lucide="check-circle"></i>
+                    Validate Job Postings
+                </a>
+                <a href="#" class="nav-item" data-page="notify">
+                    <i data-lucide="bell"></i>
+                    Notify Students
+                </a>
+                <a href="#" class="nav-item" data-page="track">
+                    <i data-lucide="trending-up"></i>
+                    Track Applications
+                </a>
+                <button class="nav-item logout-btn">
+                    <i data-lucide="log-out"></i>
+                    Logout
+                </button>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1>Placement Officer Dashboard</h1>
+                        <p>Manage placements and student applications</p>
+                    </div>
+                    <div class="header-profile">
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="profile-text">
+                                <p class="profile-name">Dan</p>
+                                <p class="profile-role">Placement Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+
+                <!-- Dashboard Page -->
+                <div id="dashboard-page" class="page active">
+                    <div class="welcome-section">
+                        <div class="welcome-card">
+                            <h2>Welcome back!</h2>
+                            <p>Here's what's happening with your placement activities today.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-text">
+                                    <p class="stat-label">Total Students</p>
+                                    <p class="stat-value">20</p>
+                                </div>
+                                <div class="stat-icon blue">
+                                    <i data-lucide="users"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-text">
+                                    <p class="stat-label">Active Companies</p>
+                                    <p class="stat-value">8</p>
+                                </div>
+                                <div class="stat-icon green">
+                                    <i data-lucide="building"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-text">
+                                    <p class="stat-label">Pending Approvals</p>
+                                    <p class="stat-value">8</p>
+                                </div>
+                                <div class="stat-icon orange">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="actions-grid">
+                            <div class="action-card" data-page="validate">
+                                <div class="action-header">
+                                    <div class="action-icon blue">
+                                        <i data-lucide="check-circle"></i>
+                                    </div>
+                                    <span class="action-count"></span>
+                                </div>
+                                <h4>Validate Job Postings</h4>
+                                <p>Review and approve new job postings from companies</p>
+                            </div>
+                            <div class="action-card" data-page="notify">
+                                <div class="action-header">
+                                    <div class="action-icon green">
+                                        <i data-lucide="bell"></i>
+                                    </div>
+                                    <span class="action-count">Ready to send</span>
+                                </div>
+                                <h4>Notify Students</h4>
+                                <p>Send notifications about new opportunities to students</p>
+                            </div>
+                            <div class="action-card" data-page="track">
+                                <div class="action-header">
+                                    <div class="action-icon purple">
+                                        <i data-lucide="trending-up"></i>
+                                    </div>
+                                    <span class="action-count"></span>
+                                </div>
+                                <h4>Track Applications</h4>
+                                <p>Monitor student applications and placement progress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Validate Page -->
+                <div id="validate-page" class="page">
+                    <div class="page-header">
+                        <h2>Validate Job Postings</h2>
+                        <p>Review and approve job postings from companies</p>
+                    </div>
+
+                    <div class="validation-stats">
+                        <div class="validation-stat">
+                            <div class="validation-value blue">2</div>
+                            <div class="validation-label">Pending Review</div>
+                        </div>
+                        <div class="validation-stat">
+                            <div class="validation-value green">1</div>
+                            <div class="validation-label">Approved</div>
+                        </div>
+                        <div class="validation-stat">
+                            <div class="validation-value red">1</div>
+                            <div class="validation-label">Rejected</div>
+                        </div>
+                        <div class="validation-stat">
+                            <div class="validation-value gray">4</div>
+                            <div class="validation-label">Total Posts</div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-content">
+                            <i data-lucide="filter"></i>
+                            <label>Filter by status:</label>
+                            <select id="status-filter">
+                                <option value="All">All Status</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="job-table">
+                            <thead>
+                                <tr>
+                                    <th>Company & Role</th>
+                                    <th>Details</th>
+                                    <th>Posted On</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="job-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Notify Page -->
+                <div id="notify-page" class="page">
+                    <div class="page-header">
+                        <h2>Notify Students & Track Applications</h2>
+                        <p>Send notifications to students and monitor application progress</p>
+                    </div>
+
+                    <!-- Notify Students Form -->
+                    <div class="notify-section">
+                        <div class="section-header">
+                            <i data-lucide="send"></i>
+                            <h3>Notify Students</h3>
+                        </div>
+
+                        <div class="notify-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Job Title</label>
+                                    <select id="job-select">
+                                        <option value="">Select a job</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Year</label>
+                                    <select id="year-select">
+                                        <option value="">Select year</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button id="notify-btn" class="notify-button" disabled>
+                                        <i data-lucide="send"></i>
+                                        Notify Students
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="branches-section">
+                                <label>Branches</label>
+                                <div class="branches-grid">
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="CSE">
+                                        <span>CSE</span>
+                                    </label>
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="ECE">
+                                        <span>ECE</span>
+                                    </label>
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="Mechanical">
+                                        <span>Mechanical</span>
+                                    </label>
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="Civil">
+                                        <span>Civil</span>
+                                    </label>
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="EEE">
+                                        <span>EEE</span>
+                                    </label>
+                                    <label class="branch-checkbox">
+                                        <input type="checkbox" value="IT">
+                                        <span>IT</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track Page -->
+                <div id="track-page" class="page">
+                    <div class="page-header">
+                        <h2>Track Applications</h2>
+                        <p>Monitor student applications and placement progress</p>
+                    </div>
+
+                    <!-- Dropdown to select a job for applications tracking -->
+                    <div class="applications-job-select-section">
+                        <label for="applications-job-select">Select Job</label>
+                        <select id="applications-job-select">
+                            <option value="">Select Job</option>
+                        </select>
+                    </div>
+
+                    <!-- Table to show applications for the selected job -->
+                    <div class="table-container">
+                        <table class="applications-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Application Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="applications-table-body">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+                <h3>Notification Sent!</h3>
+                <p>Successfully notified <span id="notified-count">0</span> students about the selected job opportunity.</p>
+                <button id="close-modal" class="modal-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
