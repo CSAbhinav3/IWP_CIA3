@@ -1,10 +1,31 @@
 # Node
-backend/node_modules/
-backend/.env
+backend_PO/node_modules/
+backend_PO/.env
+backend_PO/npm-debug.log*
+backend_PO/yarn-debug.log*
+backend_PO/yarn-error.log*
+
+# Logs
+logs
+*.log
+*.log.*
 
 # OS
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Icon?
 
-# Editor
+# IDE / Editor
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Optional: ignore coverage / test outputs
+coverage/
+.nyc_output/
+
+# Optional: ignore build artifacts (if you later add bundling)
+dist/
+build/
