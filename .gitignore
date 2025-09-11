@@ -29,3 +29,5 @@ coverage/
 # Optional: ignore build artifacts (if you later add bundling)
 dist/
 build/
+
+*.sql
